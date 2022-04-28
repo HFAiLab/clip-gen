@@ -23,7 +23,7 @@ from utils import *
 # CONFIG
 ###########################################
 
-parser = argparse.ArgumentParser(description="Train VQGAN")
+parser = argparse.ArgumentParser(description="Train GPT")
 parser.add_argument("--ds", type=str, default="coco", help="dataset name")
 parser.add_argument("--gpt", type=str, default="gpt2_medium", help="GPT model")
 parser.add_argument("--dropout", type=float, default=0.1, help="dropout rate")
