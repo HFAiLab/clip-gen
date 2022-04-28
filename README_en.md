@@ -12,7 +12,7 @@ This is a PyTorch implementation of paper "CLIP-GEN: Language-Free Training of a
 
 ## Requirements
 
-- hfai
+- hfai (to be released soon)
 - torch>=1.8
 
 ## Training
