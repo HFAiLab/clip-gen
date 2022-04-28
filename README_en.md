@@ -26,13 +26,13 @@ Supported datasets：`coco`, `imagenet`, `googlecc`
 2. train VQGAN on COCO
 
     ```shell
-    hfai python train_vqgan.py --ds coco -- -n 1 -p 30
+    python train_vqgan.py --ds coco
     ```
 
 3. train Conditional GPT on COCO
 
     ```shell
-    hfai python train_gpt.py --ds coco --vqgan_ckpt /path/to/vqgan/ckpt -- -n 4 -p 30
+    python train_gpt.py --ds coco --vqgan_ckpt /path/to/vqgan/ckpt
     ```
 
 ## Demo
