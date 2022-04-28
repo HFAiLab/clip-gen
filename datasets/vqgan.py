@@ -21,23 +21,6 @@ def create_transform(split):
     return transform
 
 
-class GoogleConceptualCaption(hfai.datasets.GoogleConceptualCaption):
-
-    def __init__(self, split) -> None:
-        super().__init__(split)
-        self.img_transform = create_transform(split)
-
-    def __getitem__(self, indices):
-        samples = super().__getitem__(indices)
-
-        new_samples = []
-        for img, text in samples:
-            img = self.img_transform(img.convert("RGB"))
-            new_samples.append(img)
-
-        return new_samples
-
-
 class ImageNet(hfai.datasets.ImageNet):
 
     def __init__(self, split) -> None:
@@ -66,7 +49,12 @@ def coco(split):
 
 
 def googlecc(split):
-    return GoogleConceptualCaption(split)
+    img_transform = create_transform(split)
+    def transform(img, text):
+        return img_transform(img.convert("RGB"))
+
+    dataset = hfai.datasets.GoogleConceptualCaption(split, transform)
+    return dataset
 
 
 def imagenet(split):

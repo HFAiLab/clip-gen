@@ -1,7 +1,6 @@
 import hfai
 import torchvision.transforms.functional as TF
 from torchvision import transforms
-from tokenizer import tokenize
 from .statistic import *
 
 
@@ -34,23 +33,6 @@ class ImageTransform():
         return img1, img2
 
 
-class GoogleConceptualCaption(hfai.datasets.GoogleConceptualCaption):
-
-    def __init__(self, split) -> None:
-        super().__init__(split)
-        self.img_transform = ImageTransform(split)
-
-    def __getitem__(self, indices):
-        samples = super().__getitem__(indices)
-
-        new_samples = []
-        for img, _ in samples:
-            img1, img2 = self.img_transform(img.convert("RGB"))
-            new_samples.append((img1, img2))
-
-        return new_samples
-
-
 class ImageNet(hfai.datasets.ImageNet):
 
     def __init__(self, split) -> None:
@@ -79,7 +61,12 @@ def coco(split):
 
 
 def googlecc(split):
-    return GoogleConceptualCaption(split)
+    img_transform = ImageTransform(split)
+    def transform(img, text):
+        img1, img2 = img_transform(img.convert("RGB"))
+        return img1, img2
+
+    return hfai.datasets.GoogleConceptualCaption(split, transform)
 
 
 def imagenet(split):
