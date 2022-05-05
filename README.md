@@ -21,7 +21,7 @@ CLIP-GEN 是一个 Language-Free 的文本生成图像的方法，它不依赖�
 
 1. 下载 CLIP 预训练模型
 
-    下载 [CLIP](TODO) 后放至 `pretrained/clip_vit_b32.pt`，该预训练模型来自 OpenAI.
+    下载 [CLIP](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/clip_vit_b32.pt) 后放至 `pretrained/clip_vit_b32.pt`，该预训练模型来自 OpenAI.
 
 2. 在 COCO 上训练 VQGAN
 
@@ -49,7 +49,7 @@ CLIP-GEN 是一个 Language-Free 的文本生成图像的方法，它不依赖�
 
 ## Demo
 
-下载在 COCO 上训练好的 [VQGAN](TODO) 和 [GPT](TODO) 模型，分别放到 `pretrained/vqgan_coco.pt` 和 `pretrained/gpt_coco.pt`；然后运行：
+下载在 COCO 上训练好的 [VQGAN](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/vqgan_coco.pt) 和 [GPT](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/gpt_coco.pt) 模型，分别放到 `pretrained/vqgan_coco.pt` 和 `pretrained/gpt_coco.pt`；然后运行：
 
 ```shell
 python demo.py --text "A city bus driving on the city street" --out "bus.jpg"
@@ -85,5 +85,5 @@ python demo.py --text "A city bus driving on the city street" --out "bus.jpg"
 
 ## TODO
 
-- [ ] 预训练模型
+- [x] 预训练模型
 - [ ] FFRecord 数据
