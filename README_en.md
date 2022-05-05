@@ -21,7 +21,7 @@ Supported datasets：`coco`, `imagenet`, `googlecc`
 
 1. Download pretrained CLIP model
 
-    Download [CLIP](TODO) to `pretrained/clip_vit_b32.pt`
+    Download [CLIP](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/clip_vit_b32.pt) to `pretrained/clip_vit_b32.pt`
 
 2. train VQGAN on COCO
 
@@ -37,7 +37,7 @@ Supported datasets：`coco`, `imagenet`, `googlecc`
 
 ## Demo
 
-Download [VQGAN](TODO) and [GPT](TODO) model (trained on COCO) to `pretrained/vqgan_coco.pt` and `pretrained/gpt_coco.pt` respectively. And run:
+Download [VQGAN](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/vqgan_coco.pt) and [GPT](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/gpt_coco.pt) model (trained on COCO) to `pretrained/vqgan_coco.pt` and `pretrained/gpt_coco.pt` respectively. And run:
 
 ```shell
 python demo.py --text "A city bus driving on the city street" --out "bus.jpg"
@@ -71,5 +71,5 @@ python demo.py --text "A city bus driving on the city street" --out "bus.jpg"
 
 ## TODO
 
-- [ ] pretrained models
+- [x] pretrained models
 - [ ] FFRecord data
