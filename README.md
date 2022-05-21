@@ -47,6 +47,11 @@ CLIP-GEN 是一个 Language-Free 的文本生成图像的方法，它不依赖�
     python train_gpt.py --ds coco --vqgan_ckpt /path/to/vqgan/ckpt
     ```
 
+## Web Demo
+
+Replicate web demo [![Replicate](https://replicate.com/hfailab/clip-gen/badge)](https://replicate.com/hfailab/clip-gen)
+
+
 ## Demo
 
 下载在 COCO 上训练好的 [VQGAN](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/vqgan_coco.pt) 和 [GPT](https://github.com/HFAiLab/clip-gen/releases/download/v0.1.0/gpt_coco.pt) 模型，分别放到 `pretrained/vqgan_coco.pt` 和 `pretrained/gpt_coco.pt`；然后运行：
