@@ -12,7 +12,7 @@ CLIP-GEN 是一个 Language-Free 的文本生成图像的方法，它不依赖�
 
 ## Requirements
 
-- hfai (to be released soon)
+- [hfai](https://doc.hfai.high-flyer.cn/index.html)
 - torch>=1.8
 
 ## Training
