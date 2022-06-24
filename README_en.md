@@ -34,6 +34,10 @@ Supported datasets：`coco`, `imagenet`, `googlecc`
     ```shell
     python train_gpt.py --ds coco --vqgan_ckpt /path/to/vqgan/ckpt
     ```
+## Web Demo
+
+Try Replicate web demo here [![Replicate](https://replicate.com/hfailab/clip-gen/badge)](https://replicate.com/hfailab/clip-gen)
+
 
 ## Demo
 
